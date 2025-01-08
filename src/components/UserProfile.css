@@ -1,0 +1,19 @@
+
+.followBtn {
+    cursor: pointer;
+    font-weight: bolder;
+    padding: 13px 25px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: none;
+    color: white;
+    background: #0115eb;
+    transition: all 0.25s ease;
+    margin-left: 20px;
+  }
+  
+  .followBtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px -10px #0115eb;
+  }
+  

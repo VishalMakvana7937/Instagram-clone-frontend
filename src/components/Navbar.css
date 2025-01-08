@@ -1,0 +1,132 @@
+.navbar a img {
+    width: 30%;
+    object-fit: contain;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 4;
+    box-shadow: 1px 5px 5px #e0dcdc;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.nav-menu-container {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    padding: 1px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.primaryBtn {
+    cursor: pointer;
+    font-weight: bolder;
+    padding: 13px 25px;
+    font-size: 0.8rem;
+    border: none;
+    color: white;
+    background: #db183c;
+    border-radius: 15px;
+    margin-left: 20px;
+    transition: all 0.25s ease;
+}
+
+.primaryBtn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px -10px rgba(219, 24, 44, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-menu-container {
+        display: none;
+    }
+
+    /* Sidebar Styles */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Initially off-screen */
+        width: 300px;
+        height: 100%;
+        background-color: #fff;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+        transition: right 0.3s ease;
+        z-index: 10;
+        padding-top: 60px; /* To avoid menu being hidden under the navbar */
+    }
+
+    .sidebar.open {
+        right: 0; /* Open sidebar */
+    }
+
+    .sidebar .nav-menu {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .sidebar li {
+        padding: 10px 20px;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Close Button (Only Visible on Mobile) */
+    .close-btn {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+        display: block; /* Ensure it's shown only on mobile */
+    }
+
+    /* Show menu toggle button on mobile */
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        margin-left: 20px;
+        z-index: 11;
+    }
+
+    .menu-toggle .bar {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background-color: #333;
+        border-radius: 5px;
+    }
+}
+
+/* Desktop (default) behavior */
+@media screen and (min-width: 769px) {
+    .close-btn {
+        display: none; /* Hide the close button on desktop screens */
+    }
+}

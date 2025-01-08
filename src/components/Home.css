@@ -1,0 +1,175 @@
+/* Main home feed container */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    /* z-index: 5; */
+}
+
+/* Each post's card */
+.card {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+}
+
+.card-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.card-header h5 {
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.card-content {
+    padding: 15px;
+    text-align: start;
+}
+
+.card-content p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.card-content span {
+    font-size: 24px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.card-content span:hover {
+    color: #ff3b30;
+}
+
+.card-content .like-count {
+    font-weight: bold;
+}
+
+/* Comment input and button */
+.add-comment {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.add-comment input {
+    flex: 1;
+    padding: 8px;
+    margin-left: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.add-comment button {
+    background-color: #0095f6;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 30px;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.add-comment button:hover {
+    background-color: #0078cc;
+}
+
+/* Comment modal (full-screen) */
+.showComment {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.postPic img {
+    width: 600px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.details {
+    margin-top: 15px;
+}
+
+.comment-section {
+    max-height: 200px;
+    /* Control the height of the comment section */
+    overflow-y: auto;
+    /* Allow vertical scrolling */
+    margin-top: 10px;
+    text-align: start;
+}
+
+.comm {
+    margin-bottom: 15px;
+}
+
+.commenter {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.commentText {
+    color: #333;
+    font-size: 14px;
+}
+
+.card-content p {
+    color: #333;
+    font-size: 14px;
+}
+
+.close-comment {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-comment:hover {
+    color: #ff6f61;
+}

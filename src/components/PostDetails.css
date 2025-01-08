@@ -1,0 +1,90 @@
+.showComment {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.container {
+    background-color: white;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 15px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.postPic img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.details {
+    margin-top: 15px;
+}
+
+.comment-section {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+    text-align: start;
+}
+
+.comm {
+    margin-bottom: 15px;
+}
+
+.commenter {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.commentText {
+    color: #333;
+    font-size: 14px;
+}
+
+.card-content p {
+    color: #333;
+    font-size: 14px;
+}
+
+.close-comment {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.close-comment:hover {
+    color: #ff6f61;
+}
+
+.container {
+    position: relative;
+  }
+  
+  .top-right-icon {
+    position: absolute;
+    top: 20px;  
+    right: 20px; 
+    background: none;
+    border: none;
+    color: #333;  
+    font-size: 20px;  
+    cursor: pointer;
+    z-index: 1; 
+  }
+  
+  .top-right-icon:hover {
+    color: red; 
+  }

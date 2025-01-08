@@ -1,0 +1,141 @@
+.darkBg {
+  background-color: rgba(0, 0, 0, 0.5); /* Darken the background */
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;  /* Set a higher z-index */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  width: 300px;
+  height: 200px;
+  background: white;
+  color: white;
+  z-index: 1001;  /* Higher than darkBg */
+  border-radius: 16px;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.modalHeader {
+  height: 50px;
+  background: #f8f8f8;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin: 0;
+  padding: 10px;
+  color: #2c3e50;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+}
+
+.modalContent {
+  padding: 20px;
+  font-size: 16px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.modalActions {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.actionsContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.closeBtn {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 20px;
+  color: white;
+  background: rgb(10, 60, 223);
+  transition: all 0.25s ease;
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.06);
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.closeBtn:hover {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+  transform: translate(-4px, -4px);
+}
+
+.logOutBtn {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 12px;
+  font-size: 14px;
+  border: none;
+  color: #fff;
+  background: #ff3e4e;
+  transition: all 0.25s ease;
+}
+
+.logOutBtn:hover {
+  box-shadow: 0 10px 20px -10px rgba(255, 62, 78, 0.6);
+  transform: translateY(-5px);
+  background: #e72e44;
+}
+
+.cancelBtn {
+  cursor: pointer;
+  font-weight: 500;
+  padding: 10px 25px;
+  border-radius: 12px;
+  font-size: 14px;
+  border: none;
+  color: #fcfcfc;
+  background: #2c3e50;
+  transition: all 0.25s ease;
+}
+
+.cancelBtn:hover {
+  box-shadow: none;
+  transform: translateY(-5px);
+}
+
+.chnagepic{
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.chnagepic   div {
+  padding: 15px 80px;
+}
+
+.upload-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-weight: bolder;
+
+  font-size: 15px;
+}
