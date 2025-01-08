@@ -15,7 +15,7 @@ const Navbar = () => {
                 <li><Link to='/'>Home</Link></li> {/* Added Home link */}
                 {login || token ? (
                     <>
-                        <li><Link to='/profile'>Profile</Link></li>
+                        <li><Link to='/user/profile'>Profile</Link></li>
                         <li><Link to='/createPost'>Create Post</Link></li>
                         <li><Link style={{ marginLeft: "20px" }} to='/following/post'>My Following Post</Link></li>
                         <li>

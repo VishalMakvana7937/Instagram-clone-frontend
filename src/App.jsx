@@ -31,7 +31,7 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/signin" element={<SignIn />} />
-                <Route exact path="/profile" element={<Profile />} />
+                <Route exact path="/user/profile" element={<Profile />} />
                 <Route path="/createPost" element={<CreatePost />} />
                 <Route path="/following/post" element={<MyFollowing />} />
                 <Route path="/profile/:userid" element={<UserProfile />} />
