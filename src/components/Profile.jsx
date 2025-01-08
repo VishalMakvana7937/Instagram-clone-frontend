@@ -35,22 +35,35 @@ const Profile = () => {
 
 
   useEffect(() => {
-    fetch(`https://instagram-clone-backend-ncso.onrender.com/user/${JSON.parse(localStorage.getItem("user"))._id}`, {
+    const userId = JSON.parse(localStorage.getItem("user"))?._id;
+
+    if (!userId) {
+      console.error("User ID is missing in localStorage");
+      return;
+    }
+
+    fetch(`https://instagram-clone-backend-ncso.onrender.com/user/${userId}`, {
       method: "GET",
       headers: {
         "Authorization": "Bearer " + localStorage.getItem("jwt"),
       },
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
       .then((result) => {
         setProfile(result.post);
-        setUser(result.user)
+        setUser(result.user);
         console.log(result);
       })
       .catch((err) => {
         console.error("Error fetching data:", err);
       });
   }, []);
+
 
   return (
     <div className="profile">
